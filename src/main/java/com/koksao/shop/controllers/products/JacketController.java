@@ -1,4 +1,5 @@
 package com.koksao.shop.controllers.products;
+import com.koksao.shop.domain.dto.request.filter.JacketFilterRequest;
 import com.koksao.shop.domain.products.Jacket;
 import com.koksao.shop.services.JacketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +17,16 @@ public class JacketController {
     @Autowired
     JacketService jacketService;
 
-    @PostMapping(value = "/jacket", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Jacket> createJacket(@RequestBody Jacket jacket) {
         Jacket savedJacket = jacketService.save(jacket);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedJacket);
     }
 
-    @GetMapping
-    public ResponseEntity<List<Jacket>> getJacket() {
-        List<Jacket> savedJackets = jacketService.findAll();
-        return ResponseEntity.status(HttpStatus.OK).body(savedJackets);
+    @PostMapping(value = "/filter", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Jacket>> getByFilters(@RequestBody JacketFilterRequest jacketFilterRequest){
+        List<Jacket> list = jacketService.findAll(jacketFilterRequest);
+        return ResponseEntity.status(HttpStatus.OK).body(list);
     }
 
 }

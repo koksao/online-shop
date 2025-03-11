@@ -1,8 +1,8 @@
 package com.koksao.shop.services;
 
 import com.koksao.shop.domain.Employee;
-import com.koksao.shop.domain.dto.EmployeeFilterRequest;
-import com.koksao.shop.domain.dto.EmployeeResponse;
+import com.koksao.shop.domain.dto.request.filter.EmployeeFilterRequest;
+import com.koksao.shop.domain.dto.response.EmployeeResponse;
 
 import java.util.List;
 import java.util.Optional;

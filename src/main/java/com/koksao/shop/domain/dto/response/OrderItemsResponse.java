@@ -1,4 +1,4 @@
-package com.koksao.shop.domain.dto;
+package com.koksao.shop.domain.dto.response;
 
 import com.koksao.shop.domain.products.ClothingSize;
 import jakarta.persistence.EnumType;

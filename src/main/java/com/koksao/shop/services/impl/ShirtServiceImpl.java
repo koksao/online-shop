@@ -1,6 +1,6 @@
 package com.koksao.shop.services.impl;
 
-import com.koksao.shop.domain.dto.ShirtFilterRequest;
+import com.koksao.shop.domain.dto.request.filter.ShirtFilterRequest;
 import com.koksao.shop.domain.products.Shirt;
 import com.koksao.shop.repositories.products.ShirtRepository;
 import com.koksao.shop.repositories.specifications.ShirtSpecification;

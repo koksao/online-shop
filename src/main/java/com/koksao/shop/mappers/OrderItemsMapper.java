@@ -1,6 +1,6 @@
 package com.koksao.shop.mappers;
 
-import com.koksao.shop.domain.dto.OrderItemsResponse;
+import com.koksao.shop.domain.dto.response.OrderItemsResponse;
 import com.koksao.shop.domain.products.OrderItems;
 import org.springframework.stereotype.Component;
 

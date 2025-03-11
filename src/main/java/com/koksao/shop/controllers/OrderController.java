@@ -1,7 +1,7 @@
 package com.koksao.shop.controllers;
 
-import com.koksao.shop.domain.dto.OrderRequest;
-import com.koksao.shop.domain.dto.OrderResponse;
+import com.koksao.shop.domain.dto.request.OrderRequest;
+import com.koksao.shop.domain.dto.response.OrderResponse;
 import com.koksao.shop.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,8 +1,8 @@
 package com.koksao.shop.mappers;
 
-import com.koksao.shop.domain.dto.OrderItemsResponse;
-import com.koksao.shop.domain.dto.OrderRequest;
-import com.koksao.shop.domain.dto.OrderResponse;
+import com.koksao.shop.domain.dto.response.OrderItemsResponse;
+import com.koksao.shop.domain.dto.request.OrderRequest;
+import com.koksao.shop.domain.dto.response.OrderResponse;
 import com.koksao.shop.domain.products.Order;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;

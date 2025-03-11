@@ -1,7 +1,6 @@
-package com.koksao.shop.domain.dto;
+package com.koksao.shop.domain.dto.response;
 
 import com.koksao.shop.domain.Position;
-import com.koksao.shop.repositories.EmployeeRepository;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;

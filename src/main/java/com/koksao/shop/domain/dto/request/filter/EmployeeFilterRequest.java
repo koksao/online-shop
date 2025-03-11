@@ -1,4 +1,4 @@
-package com.koksao.shop.domain.dto;
+package com.koksao.shop.domain.dto.request.filter;
 
 import com.koksao.shop.domain.Membership;
 import com.koksao.shop.domain.Position;
@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class EmployeeFilterRequest {
+
+    Long id;
 
     String firstName;
 

@@ -1,4 +1,4 @@
-package com.koksao.shop.domain.dto;
+package com.koksao.shop.domain.dto.request;
 
 
 import lombok.Data;

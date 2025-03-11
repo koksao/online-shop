@@ -1,8 +1,8 @@
 package com.koksao.shop.services;
 
-import com.koksao.shop.domain.dto.OrderItemsRequest;
-import com.koksao.shop.domain.dto.OrderRequest;
-import com.koksao.shop.domain.dto.OrderResponse;
+import com.koksao.shop.domain.dto.request.OrderItemsRequest;
+import com.koksao.shop.domain.dto.request.OrderRequest;
+import com.koksao.shop.domain.dto.response.OrderResponse;
 import com.koksao.shop.domain.products.Order;
 
 import java.util.List;

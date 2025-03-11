@@ -3,7 +3,7 @@ package com.koksao.shop.repositories.specifications;
 import com.koksao.shop.domain.Employee;
 import com.koksao.shop.domain.Membership;
 import com.koksao.shop.domain.Position;
-import com.koksao.shop.domain.dto.EmployeeFilterRequest;
+import com.koksao.shop.domain.dto.request.filter.EmployeeFilterRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 
@@ -58,10 +58,21 @@ public class EmployeeSpecification {
                 );
     }
 
+    public Specification<Employee> byId(Long id) {
+        return (root, query, cb) ->
+                cb.equal(
+                        root.get("id"),
+                        id
+                );
+    }
+
     public Specification<Employee> conditionalSearchForEmployee(EmployeeFilterRequest employeeFilterRequest) {
 
         Specification<Employee> spec = Specification.where(null);
 
+        if(employeeFilterRequest.getId() != null) {
+            spec = spec.and(byId(employeeFilterRequest.getId()));
+        }
         if (employeeFilterRequest.getFirstName() != null) {
             spec = spec.and(byFirstName(employeeFilterRequest.getFirstName()));
         }
